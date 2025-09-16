@@ -1399,7 +1399,7 @@ arm*-*-phoenix*)
 	tmake_file="${tmake_file} arm/t-arm arm/t-bpabi arm/t-phoenix"
 	target_cpu_cname="arm7tdmi"
 	;;
-arm*-*-eabi* | arm*-*-symbianelf* | arm*-*-rtems* | arm*-*-fuchsia*)
+arm*-*-eabi* | arm*-*-symbianelf* | arm*-*-rtems* | arm*-*-fuchsia* | arm*-*-pados*)
 	case ${target} in
 	arm*eb-*-eabi*)
 	  tm_defines="${tm_defines} TARGET_BIG_ENDIAN_DEFAULT=1"
@@ -1409,6 +1409,11 @@ arm*-*-eabi* | arm*-*-symbianelf* | arm*-*-rtems* | arm*-*-fuchsia*)
 	tmake_file="${tmake_file} arm/t-arm arm/t-arm-elf"
 	target_cpu_cname="arm7tdmi"
 	case ${target} in
+	arm*-*-pados*)
+	  tm_file="${tm_file} arm/pados.h newlib-stdint.h"
+	  tmake_file="${tmake_file} arm/t-bpabi"
+	  use_gcc_stdint=wrap
+	  ;;
 	arm*-*-eabi*)
 	  tm_file="$tm_file newlib-stdint.h"
 	  tmake_file="${tmake_file} arm/t-bpabi"

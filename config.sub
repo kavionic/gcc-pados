@@ -1446,6 +1446,9 @@ case $os in
 	syllable*)
 		os=syllable
 		;;
+	pados*)
+		os=pados
+		;;
 	386bsd)
 		os=bsd
 		;;
