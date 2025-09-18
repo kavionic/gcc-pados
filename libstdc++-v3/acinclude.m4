@@ -1792,7 +1792,7 @@ AC_DEFUN([GLIBCXX_ENABLE_LIBSTDCXX_TIME], [
         ac_has_nanosleep=yes
         ac_has_sched_yield=yes
         ;;
-      freebsd*|netbsd*|dragonfly*|rtems*)
+      freebsd*|netbsd*|dragonfly*|rtems*|pados*)
         ac_has_clock_monotonic=yes
         ac_has_clock_realtime=yes
         ac_has_nanosleep=yes
@@ -4940,6 +4940,9 @@ AC_DEFUN([GLIBCXX_ENABLE_FILESYSTEM_TS], [
         enable_libstdcxx_filesystem_ts=yes
         ;;
       gnu* | linux* | kfreebsd*-gnu | knetbsd*-gnu | uclinux*)
+        enable_libstdcxx_filesystem_ts=yes
+        ;;
+      pados*)
         enable_libstdcxx_filesystem_ts=yes
         ;;
       rtems*)
