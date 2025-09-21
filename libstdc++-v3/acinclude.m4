@@ -1792,7 +1792,7 @@ AC_DEFUN([GLIBCXX_ENABLE_LIBSTDCXX_TIME], [
         ac_has_nanosleep=yes
         ac_has_sched_yield=yes
         ;;
-      freebsd*|netbsd*|dragonfly*|rtems*)
+      freebsd*|netbsd*|dragonfly*|rtems*|pados*)
         ac_has_clock_monotonic=yes
         ac_has_clock_realtime=yes
         ac_has_nanosleep=yes
@@ -4945,6 +4945,9 @@ AC_DEFUN([GLIBCXX_ENABLE_FILESYSTEM_TS], [
       gnu* | linux* | kfreebsd*-gnu | knetbsd*-gnu | uclinux*)
         enable_libstdcxx_filesystem_ts=yes
         ;;
+      pados*)
+        enable_libstdcxx_filesystem_ts=yes
+        ;;
       rtems*)
         enable_libstdcxx_filesystem_ts=yes
         ;;
@@ -5677,7 +5680,7 @@ AC_DEFUN([GLIBCXX_ZONEINFO_DIR], [
   if test "x${with_libstdcxx_zoneinfo}" = xyes; then
     # Pick a default when no specific path is set.
     case "$target_os" in
-      gnu* | linux* | kfreebsd*-gnu | knetbsd*-gnu)
+      gnu* | linux* | kfreebsd*-gnu | knetbsd*-gnu | pados*)
 	# Not all distros ship tzdata.zi in this dir.
 	zoneinfo_dir="/usr/share/zoneinfo"
 	;;
