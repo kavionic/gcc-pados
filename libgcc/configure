@@ -1606,7 +1606,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) >= 0)];
 test_array [0] = 0;
@@ -1623,7 +1623,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) <= $ac_mid)];
 test_array [0] = 0;
@@ -1650,7 +1650,7 @@ else
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) < 0)];
 test_array [0] = 0;
@@ -1667,7 +1667,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) >= $ac_mid)];
 test_array [0] = 0;
@@ -1702,7 +1702,7 @@ while test "x$ac_lo" != "x$ac_hi"; do
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) <= $ac_mid)];
 test_array [0] = 0;
@@ -1727,12 +1727,12 @@ esac
     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 $4
-static long int longval () { return $2; }
-static unsigned long int ulongval () { return $2; }
+static long int longval (void) { return $2; }
+static unsigned long int ulongval (void) { return $2; }
 #include <stdio.h>
 #include <stdlib.h>
 int
-main ()
+main (void)
 {
 
   FILE *f = fopen ("conftest.val", "w");
@@ -3565,7 +3565,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 #include <stdio.h>
 int
-main ()
+main (void)
 {
 printf ("hello world\n");
   ;
@@ -3593,7 +3593,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3733,7 +3733,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 #include <stdio.h>
 int
-main ()
+main (void)
 {
 FILE *f = fopen ("conftest.out", "w");
  return ferror (f) || fclose (f) != 0;
@@ -3798,7 +3798,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3849,7 +3849,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 #ifndef __GNUC__
        choke me
@@ -3890,7 +3890,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3905,7 +3905,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3921,7 +3921,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3970,9 +3970,7 @@ struct stat;
 /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
 struct buf { int x; };
 FILE * (*rcsopen) (struct buf *, struct stat *, int);
-static char *e (p, i)
-     char **p;
-     int i;
+static char *e (char **p, int i)
 {
   return p[i];
 }
@@ -4007,7 +4005,7 @@ int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, i
 int argc;
 char **argv;
 int
-main ()
+main (void)
 {
 return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
   ;
@@ -4222,7 +4220,7 @@ else
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4268,7 +4266,7 @@ else
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4292,7 +4290,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4337,7 +4335,7 @@ else
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4361,7 +4359,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4623,7 +4621,7 @@ else
 #include <float.h>
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -4693,7 +4691,7 @@ else
 
 #define XOR(e, f) (((e) && !(f)) || (!(e) && (f)))
 int
-main ()
+main (void)
 {
   int i;
   for (i = 0; i < 256; i++)
@@ -4735,7 +4733,7 @@ else
 #include <fenv.h>
 
 int
-main ()
+main (void)
 {
 
 _Decimal32 x;
@@ -4885,7 +4883,7 @@ else
           this will fail
           #endif
 int
-main ()
+main (void)
 {
 int i;
   ;
@@ -4931,7 +4929,7 @@ case "$host" in
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
 #if !defined(__SSE2__)
@@ -4958,7 +4956,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 asm ("setssbsy");
   ;
@@ -5524,7 +5522,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 asm("vzeroupper");
   ;
@@ -5563,7 +5561,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 			asm(".arch armv8-a+lse\n\tcas w0, w1, [x2]");
 
@@ -5603,7 +5601,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 asm (".variant_pcs foobar");
   ;
@@ -5664,7 +5662,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 void ip (void) __attribute__ ((constructor (1)));
   ;

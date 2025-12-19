@@ -1841,7 +1841,7 @@ else
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 if (sizeof ($2))
 	 return 0;
@@ -1854,7 +1854,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 if (sizeof (($2)))
 	    return 0;
@@ -1899,7 +1899,7 @@ else
 /* end confdefs.h.  */
 $ac_includes_default
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !((($ac_type) -1 >> ($2 / 2 - 1)) >> ($2 / 2 - 1) == 3)];
 test_array [0] = 0;
@@ -1946,7 +1946,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) >= 0)];
 test_array [0] = 0;
@@ -1963,7 +1963,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) <= $ac_mid)];
 test_array [0] = 0;
@@ -1990,7 +1990,7 @@ else
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) < 0)];
 test_array [0] = 0;
@@ -2007,7 +2007,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) >= $ac_mid)];
 test_array [0] = 0;
@@ -2042,7 +2042,7 @@ while test "x$ac_lo" != "x$ac_hi"; do
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(($2) <= $ac_mid)];
 test_array [0] = 0;
@@ -2067,12 +2067,12 @@ esac
     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 $4
-static long int longval () { return $2; }
-static unsigned long int ulongval () { return $2; }
+static long int longval (void) { return $2; }
+static unsigned long int ulongval (void) { return $2; }
 #include <stdio.h>
 #include <stdlib.h>
 int
-main ()
+main (void)
 {
 
   FILE *f = fopen ("conftest.val", "w");
@@ -2133,7 +2133,7 @@ else
 #define $2 innocuous_$2
 
 /* System header to define __stub macros and hopefully few prototypes,
-    which can conflict with char $2 (); below.
+    which can conflict with char $2 (void); below.
     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
     <limits.h> exists even on freestanding compilers.  */
 
@@ -2151,7 +2151,7 @@ else
 #ifdef __cplusplus
 extern "C"
 #endif
-char $2 ();
+char $2 (void);
 /* The GNU C library defines this for functions which it implements
     to always fail with ENOSYS.  Some functions are actually named
     something starting with __ and the normal name is an alias.  */
@@ -2160,7 +2160,7 @@ choke me
 #endif
 
 int
-main ()
+main (void)
 {
 return $2 ();
   ;
@@ -2200,7 +2200,7 @@ else
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 #ifndef $as_decl_name
 #ifdef __cplusplus
@@ -3271,7 +3271,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3411,7 +3411,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 #include <stdio.h>
 int
-main ()
+main (void)
 {
 FILE *f = fopen ("conftest.out", "w");
  return ferror (f) || fclose (f) != 0;
@@ -3475,7 +3475,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3526,7 +3526,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 #ifndef __GNUC__
        choke me
@@ -3567,7 +3567,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3582,7 +3582,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3598,7 +3598,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3647,9 +3647,7 @@ struct stat;
 /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
 struct buf { int x; };
 FILE * (*rcsopen) (struct buf *, struct stat *, int);
-static char *e (p, i)
-     char **p;
-     int i;
+static char *e (char **p, int i)
 {
   return p[i];
 }
@@ -3684,7 +3682,7 @@ int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, i
 int argc;
 char **argv;
 int
-main ()
+main (void)
 {
 return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
   ;
@@ -3873,7 +3871,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 #ifndef __GNUC__
        choke me
@@ -3914,7 +3912,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3929,7 +3927,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3945,7 +3943,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -4452,7 +4450,7 @@ else
 #include <float.h>
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -4522,7 +4520,7 @@ else
 
 #define XOR(e, f) (((e) && !(f)) || (!(e) && (f)))
 int
-main ()
+main (void)
 {
   int i;
   for (i = 0; i < 256; i++)
@@ -4601,7 +4599,7 @@ else
 #         define __EXTENSIONS__ 1
           $ac_includes_default
 int
-main ()
+main (void)
 {
 
   ;
@@ -4659,7 +4657,7 @@ else
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4705,7 +4703,7 @@ else
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4729,7 +4727,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4774,7 +4772,7 @@ else
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4798,7 +4796,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
 int
-main ()
+main (void)
 {
 
   ;
@@ -4997,7 +4995,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -5055,7 +5053,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -5106,7 +5104,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -5164,7 +5162,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -5371,7 +5369,7 @@ else
 #include <time.h>
 
 int
-main ()
+main (void)
 {
 if ((struct tm *) 0)
 return 0;
@@ -5404,7 +5402,7 @@ else
 #include <string.h>
 #include <strings.h>
 int
-main ()
+main (void)
 {
 
   ;
@@ -5491,7 +5489,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 	     #include <sys/param.h>
 
 int
-main ()
+main (void)
 {
 #if ! (defined BYTE_ORDER && defined BIG_ENDIAN \
 		     && defined LITTLE_ENDIAN && BYTE_ORDER && BIG_ENDIAN \
@@ -5511,7 +5509,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
 		#include <sys/param.h>
 
 int
-main ()
+main (void)
 {
 #if BYTE_ORDER != BIG_ENDIAN
 		 not big endian
@@ -5537,7 +5535,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 #include <limits.h>
 
 int
-main ()
+main (void)
 {
 #if ! (defined _LITTLE_ENDIAN || defined _BIG_ENDIAN)
 	      bogus endian macros
@@ -5554,7 +5552,7 @@ if ac_fn_c_try_compile "$LINENO"; then :
 #include <limits.h>
 
 int
-main ()
+main (void)
 {
 #ifndef _BIG_ENDIAN
 		 not big endian
@@ -5596,7 +5594,7 @@ short int ascii_mm[] =
 		extern int foo;
 
 int
-main ()
+main (void)
 {
 return use_ascii (foo) == use_ebcdic (foo);
   ;
@@ -5622,7 +5620,7 @@ else
 /* end confdefs.h.  */
 $ac_includes_default
 int
-main ()
+main (void)
 {
 
 	     /* Are we little or big endian?  From Harbison&Steele.  */
@@ -5676,7 +5674,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
 #ifndef __cplusplus
@@ -5759,8 +5757,8 @@ for ac_kw in inline __inline__ __inline; do
 /* end confdefs.h.  */
 #ifndef __cplusplus
 typedef int foo_t;
-static $ac_kw foo_t static_foo () {return 0; }
-$ac_kw foo_t foo () {return 0; }
+static $ac_kw foo_t static_foo (void) {return 0; }
+$ac_kw foo_t foo (void) {return 0; }
 #endif
 
 _ACEOF
@@ -5800,7 +5798,7 @@ else
 $ac_includes_default
 		      #include "obstack.h"
 int
-main ()
+main (void)
 {
 struct obstack mem;
 		       #define obstack_chunk_alloc malloc
@@ -5880,7 +5878,7 @@ else
 /* end confdefs.h.  */
 $ac_includes_default
 int
-main ()
+main (void)
 {
 static int test_array [1 - 2 * !(sizeof (void *) <= sizeof ($ac_type))];
 test_array [0] = 0;
@@ -5943,7 +5941,7 @@ else
 #include <time.h>
 
 int
-main ()
+main (void)
 {
 struct tm tm;
 				     int *p = &tm.tm_sec;
@@ -6282,7 +6280,7 @@ else
 /* end confdefs.h.  */
 #include <alloca.h>
 int
-main ()
+main (void)
 {
 char *p = (char *) alloca (2 * sizeof (int));
 			  if (p) return 0;
@@ -6335,7 +6333,7 @@ void *alloca (size_t);
 #endif
 
 int
-main ()
+main (void)
 {
 char *p = (char *) alloca (1);
 				    if (p) return 0;
@@ -6470,7 +6468,7 @@ else
 #include <float.h>
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -6540,7 +6538,7 @@ else
 
 #define XOR(e, f) (((e) && !(f)) || (!(e) && (f)))
 int
-main ()
+main (void)
 {
   int i;
   for (i = 0; i < 256; i++)
@@ -6579,7 +6577,7 @@ else
 /* end confdefs.h.  */
 #include <langinfo.h>
 int
-main ()
+main (void)
 {
 char* cs = nl_langinfo(CODESET);
   ;
@@ -7510,7 +7508,7 @@ else
 /* end confdefs.h.  */
 #include <CoreFoundation/CFPreferences.h>
 int
-main ()
+main (void)
 {
 CFPreferencesCopyAppValue(NULL, NULL)
   ;
@@ -7544,7 +7542,7 @@ else
 /* end confdefs.h.  */
 #include <CoreFoundation/CFLocale.h>
 int
-main ()
+main (void)
 {
 CFLocaleCopyPreferredLanguages();
   ;
@@ -7629,7 +7627,7 @@ extern int *_nl_domain_bindings;
 $gt_revision_test_code
 
 int
-main ()
+main (void)
 {
 
 bindtextdomain ("", "");
@@ -7697,7 +7695,7 @@ else
 #include <iconv.h>
 
 int
-main ()
+main (void)
 {
 iconv_t cd = iconv_open("","");
            iconv(cd,NULL,NULL,NULL,NULL);
@@ -7721,7 +7719,7 @@ rm -f core conftest.err conftest.$ac_objext \
 #include <iconv.h>
 
 int
-main ()
+main (void)
 {
 iconv_t cd = iconv_open("","");
              iconv(cd,NULL,NULL,NULL,NULL);
@@ -7772,7 +7770,7 @@ else
 #endif
 
 int
-main ()
+main (void)
 {
 int result = 0;
   /* Test against AIX 5.1...7.2 bug: Failures are not distinguishable from
@@ -8345,7 +8343,7 @@ const char *_nl_expand_alias (const char *);
 $gt_revision_test_code
 
 int
-main ()
+main (void)
 {
 
 bindtextdomain ("", "");
@@ -8382,7 +8380,7 @@ const char *_nl_expand_alias (const char *);
 $gt_revision_test_code
 
 int
-main ()
+main (void)
 {
 
 bindtextdomain ("", "");
@@ -8594,7 +8592,7 @@ else
 #include <sys/types.h>
 
 int
-main ()
+main (void)
 {
 if ((uchar *)0) return 0;
  if (sizeof(uchar)) return 0;
@@ -8737,7 +8735,7 @@ else
 #include <iconv.h>
 
 int
-main ()
+main (void)
 {
 iconv_t cd = iconv_open("","");
            iconv(cd,NULL,NULL,NULL,NULL);
@@ -8761,7 +8759,7 @@ rm -f core conftest.err conftest.$ac_objext \
 #include <iconv.h>
 
 int
-main ()
+main (void)
 {
 iconv_t cd = iconv_open("","");
              iconv(cd,NULL,NULL,NULL,NULL);
@@ -8812,7 +8810,7 @@ else
 #endif
 
 int
-main ()
+main (void)
 {
 int result = 0;
   /* Test against AIX 5.1...7.2 bug: Failures are not distinguishable from
@@ -8982,7 +8980,7 @@ extern
 size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -9138,7 +9136,7 @@ case $target in
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 asm ("pshufb %xmm0, %xmm1")
   ;
@@ -9209,7 +9207,7 @@ case "$host" in
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
 #if !defined(__SSE2__)
@@ -9235,7 +9233,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 asm ("setssbsy");
   ;
@@ -9281,7 +9279,7 @@ if test x$may_have_cet = xyes; then
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 return 0;
   ;

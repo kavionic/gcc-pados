@@ -1850,7 +1850,7 @@ else
 #define $2 innocuous_$2
 
 /* System header to define __stub macros and hopefully few prototypes,
-    which can conflict with char $2 (); below.
+    which can conflict with char $2 (void); below.
     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
     <limits.h> exists even on freestanding compilers.  */
 
@@ -1868,7 +1868,7 @@ else
 #ifdef __cplusplus
 extern "C"
 #endif
-char $2 ();
+char $2 (void);
 /* The GNU C library defines this for functions which it implements
     to always fail with ENOSYS.  Some functions are actually named
     something starting with __ and the normal name is an alias.  */
@@ -1877,7 +1877,7 @@ choke me
 #endif
 
 int
-main ()
+main (void)
 {
 return $2 ();
   ;
@@ -2038,7 +2038,7 @@ else
 /* end confdefs.h.  */
 $4
 int
-main ()
+main (void)
 {
 #ifndef $as_decl_name
 #ifdef __cplusplus
@@ -2899,7 +2899,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3039,7 +3039,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 #include <stdio.h>
 int
-main ()
+main (void)
 {
 FILE *f = fopen ("conftest.out", "w");
  return ferror (f) || fclose (f) != 0;
@@ -3103,7 +3103,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3154,7 +3154,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 #ifndef __GNUC__
        choke me
@@ -3195,7 +3195,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3210,7 +3210,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3226,7 +3226,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3275,9 +3275,7 @@ struct stat;
 /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
 struct buf { int x; };
 FILE * (*rcsopen) (struct buf *, struct stat *, int);
-static char *e (p, i)
-     char **p;
-     int i;
+static char *e (char **p, int i)
 {
   return p[i];
 }
@@ -3312,7 +3310,7 @@ int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, i
 int argc;
 char **argv;
 int
-main ()
+main (void)
 {
 return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
   ;
@@ -3370,7 +3368,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3697,7 +3695,7 @@ else
 #include <float.h>
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -3767,7 +3765,7 @@ else
 
 #define XOR(e, f) (((e) && !(f)) || (!(e) && (f)))
 int
-main ()
+main (void)
 {
   int i;
   for (i = 0; i < 256; i++)
@@ -3846,7 +3844,7 @@ else
 #         define __EXTENSIONS__ 1
           $ac_includes_default
 int
-main ()
+main (void)
 {
 
   ;
@@ -6667,7 +6665,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -7253,7 +7251,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -8890,7 +8888,7 @@ _LT_EOF
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -8930,7 +8928,7 @@ if test -z "$aix_libpath"; then aix_libpath="/usr/lib:/lib"; fi
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -10205,7 +10203,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -10646,9 +10644,9 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 #ifdef __cplusplus
 extern "C"
 #endif
-char dlopen ();
+char dlopen (void);
 int
-main ()
+main (void)
 {
 return dlopen ();
   ;
@@ -10699,9 +10697,9 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 #ifdef __cplusplus
 extern "C"
 #endif
-char shl_load ();
+char shl_load (void);
 int
-main ()
+main (void)
 {
 return shl_load ();
   ;
@@ -10742,9 +10740,9 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 #ifdef __cplusplus
 extern "C"
 #endif
-char dlopen ();
+char dlopen (void);
 int
-main ()
+main (void)
 {
 return dlopen ();
   ;
@@ -10781,9 +10779,9 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 #ifdef __cplusplus
 extern "C"
 #endif
-char dlopen ();
+char dlopen (void);
 int
-main ()
+main (void)
 {
 return dlopen ();
   ;
@@ -10820,9 +10818,9 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 #ifdef __cplusplus
 extern "C"
 #endif
-char dld_link ();
+char dld_link (void);
 int
-main ()
+main (void)
 {
 return dld_link ();
   ;
@@ -10890,7 +10888,7 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<_LT_EOF
-#line 10893 "configure"
+#line 10891 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -10996,7 +10994,7 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<_LT_EOF
-#line 10999 "configure"
+#line 10997 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -11379,7 +11377,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 #ifndef __GNUC__
        choke me
@@ -11420,7 +11418,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -11435,7 +11433,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -11451,7 +11449,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -12144,7 +12142,7 @@ $as_echo_n "checking whether the $compiler linker ($LD) supports shared librarie
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -12185,7 +12183,7 @@ if test -z "$aix_libpath"; then aix_libpath="/usr/lib:/lib"; fi
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -14337,7 +14335,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -14738,7 +14736,7 @@ case "$host" in
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
 #if !defined(__SSE2__)
@@ -14764,7 +14762,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 asm ("setssbsy");
   ;
@@ -14810,7 +14808,7 @@ if test x$may_have_cet = xyes; then
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 return 0;
   ;
@@ -14986,7 +14984,7 @@ else
 /* end confdefs.h.  */
 
 int
-main ()
+main (void)
 {
 
   ;
@@ -15079,7 +15077,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 
 
 int
-main ()
+main (void)
 {
 return main ();
   ;
@@ -15135,7 +15133,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 
 
 int
-main ()
+main (void)
 {
 return main ();
   ;
@@ -15276,9 +15274,9 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 #ifdef __cplusplus
 extern "C"
 #endif
-char dlopen ();
+char dlopen (void);
 int
-main ()
+main (void)
 {
 return dlopen ();
   ;
@@ -15346,7 +15344,7 @@ $as_echo_n "checking for -fPIC -shared... " >&6; }
 /* end confdefs.h.  */
 extern int X;
 int
-main ()
+main (void)
 {
 return X == 0;
   ;
