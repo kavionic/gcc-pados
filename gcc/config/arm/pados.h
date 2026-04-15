@@ -18,6 +18,12 @@
 
 #define HAS_INIT_SECTION
 
+/* PadOS exit() and abort() uses _Unwind_ForcedUnwind to unwind C++ stacks on
+   process exit. They must therefore not be treated as nothrow by the compiler,
+   or EH cleanup edges will be suppressed at call sites and destructors will
+   never be invoked.  This flag is tested in except.cc.  */
+#define PADOS_EXIT_NOT_NOTHROW 1
+
 #undef TARGET_OS_CPP_BUILTINS
 #define TARGET_OS_CPP_BUILTINS()		\
     do {					\

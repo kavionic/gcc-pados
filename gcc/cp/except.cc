@@ -941,6 +941,16 @@ nothrow_libfn_p (const_tree fn)
      unless the system headers are playing rename tricks, and if
      they are, we don't want to be confused by them.  */
   id = DECL_NAME (fn);
+
+#ifdef PADOS_EXIT_NOT_NOTHROW
+  /* On PadOS, exit() and abort() unwind the calling thread's stack via
+     _Unwind_ForcedUnwind before terminating. They must NOT be treated as
+     nothrow or the compiler will suppress EH cleanup edges and RAII
+     destructors will never be called.  */
+  if (id == get_identifier ("exit") || id == get_identifier ("abort"))
+    return 0;
+#endif
+
   const struct libc_name_struct *s
     = libc_name::libc_name_p (IDENTIFIER_POINTER (id), IDENTIFIER_LENGTH (id));
   if (s == NULL)
